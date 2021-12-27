@@ -13,17 +13,8 @@ phases:
         - echo Installing source NPM dependencies...
         - npm install
         - npm install -g @angular/cli
-        - export SONAR_SCANNER_VERSION=4.4.0.2170
-        - export SONAR_SCANNER_HOME=$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-linux
-        - curl --create-dirs -sSLo $HOME/.sonar/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-linux.zip
-        - unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
-        - export PATH=$SONAR_SCANNER_HOME/bin:$PATH
-        - export SONAR_SCANNER_OPTS="-server"
-        - sonar-scanner \
-  -Dsonar.organization=adarsha1999 \
-  -Dsonar.projectKey=angular_ci_cd \
-  -Dsonar.sources=. \
-  -Dsonar.host.url=https://sonarcloud.io
+        - npm install -g sonarqube-scanner
+        - sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=d956cfddc710cb7c2d7746b68628e5424b265705
 
   build:
     commands:
