@@ -25,6 +25,5 @@ phases:
 artifacts:
     files:
         - '**/*'
-    type: zip
     base-directory: 'dist*'
     discard-paths: yes
