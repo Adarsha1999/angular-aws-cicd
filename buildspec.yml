@@ -13,7 +13,7 @@ phases:
         - echo Installing source NPM dependencies...
         - npm install
         - npm install -g @angular/cli
-        - npm -g sonarqube-scanner
+        - npm install -g sonarqube-scanner
         - sonar-scanner -Dsonar.host.url=https://sonarcloud.io/organizations/adarsha1999/projects -Dsonar.login=6210789d545c3232998515272cb0184f4bdbbb8e
   build:
     commands:
