@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "sonar": "sonar-scanner"
+    "gulp": "gulp"
   },
   "private": true,
   "dependencies": {
