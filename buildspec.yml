@@ -21,8 +21,6 @@ phases:
     commands:
         - echo Build started 
         - ng build --prod
-        - cd ..
-        - npm run gulp
         
 
 artifacts:
